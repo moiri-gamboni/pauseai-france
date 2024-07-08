@@ -5,6 +5,7 @@
 	import Risks from '../home/risks.svelte'
 	import Articles from '../home/articles.svelte'
 	import Faq from '../home/faq.svelte'
+	import Supporters from '../home/supporters.svelte'
 
 	const title = 'We need to Pause AI'
 	const description = 'We are risking human extinction. We need to pause AI development, right now.'
@@ -17,6 +18,8 @@
 <Lead />
 
 <Risks />
+
+<Supporters />
 
 <Articles />
 
