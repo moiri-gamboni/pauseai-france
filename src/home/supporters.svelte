@@ -12,35 +12,35 @@
 				class="card"
 				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 			<SupporterCard
 				class="card"
 				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 			<SupporterCard
 				class="card"
 				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 			<SupporterCard
 				class="card"
 				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 			<SupporterCard
 				class="card"
-				name="Fin"
+				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 		</div>
@@ -49,35 +49,35 @@
 				class="card"
 				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 			<SupporterCard
 				class="card"
 				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 			<SupporterCard
 				class="card"
 				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 			<SupporterCard
 				class="card"
 				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 			<SupporterCard
 				class="card"
 				name="Yann LeCan"
 				blurb="Chercheur @ Meta"
-				category="Gouvernance"
+				image="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d"
 				url="/risks"
 			/>
 		</div>

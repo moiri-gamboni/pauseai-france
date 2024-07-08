@@ -3,14 +3,14 @@
 
 	export let name
 	export let blurb
-	export let category
+	export let image
 	export let url
 </script>
 
 <a class="article-link" href={url}>
 	<article>
 		<div class="supporterImage">
-			<img src="@imagetools/a061abcea4e33e32315e09e5ab06245d6623388d" />
+			<img src={image} />
 		</div>
 		<div>
 			<h3>{name}</h3>
