@@ -24,15 +24,19 @@ The article will be published automatically when the pull request is merged.
 
 ## Running locally
 
+First, [install pnpm with corepack](https://pnpm.io/installation#using-corepack). Then:
+
 ```sh
 git clone git@github.com:moiri-gamboni/pauseai-france.git
 # Copy the envs and set the variables if needed
 cp template.env .env
-# Instead of pnpm you could use npm or yarn
 pnpm install
 pnpm run dev
 # Open http://localhost:37572
 ```
+
+Note:
+While SvelteKit implements "[Zero-effort type safety](https://svelte.dev/blog/zero-config-type-safety)", the eslint-typescript plugin hasn't implemented this feature (see issue [#413](https://github.com/sveltejs/eslint-plugin-svelte/issues/413)) so you might see type inference errors in VSCode. When in doubt you can run `pnpm check` which will use SvelteKit features.
 
 ## Deployment
 

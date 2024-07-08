@@ -32,7 +32,7 @@
 
 	<div class="nav-right">
 		<div class="nav-links">
-			<NavLink href="/risks">Risques</NavLink>
+			<NavLink href="/risques">Risques</NavLink>
 			<NavLink href="/proposal">Propositions</NavLink>
 			<!-- <NavLink href="/protests">Protests</NavLink> -->
 			<!-- <NavLink href="/faq">FAQ</NavLink> -->
@@ -43,7 +43,7 @@
 				<NavLink href="/chat">{botName}</NavLink>
 			{/if}
 			<!-- <NavLink href="/about">About</NavLink> -->
-			<NavLink href="/join"><Button alt={onHomepage}>Nous rejoindre</Button></NavLink>
+			<Button href="/join" alt={onHomepage}>Nous rejoindre</Button>
 			<!-- <NavLink href="/search" ariaLabel="Search"><SearchIcon size="0.8em" /></NavLink> -->
 		</div>
 		<button class="hamburger" on:click={() => (open = !open)}>
@@ -129,7 +129,7 @@
 		background: #ff9416;
 		top: 0;
 		left: 100%;
-		padding: 1.95rem 1rem;
+		padding: 2rem 1rem;
 		transition: left 0.3s ease-in-out;
 	}
 
@@ -168,7 +168,7 @@
 		/* margin-left: -1rem; */
 		flex-wrap: wrap;
 		z-index: 1;
-		padding: 1.95rem 1rem;
+		padding: 2rem 1rem;
 	}
 
 	/* .logo {
@@ -188,6 +188,10 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.nav-links :global(a:last-child) {
+		margin-left: 0.5rem;
 	}
 
 	.hamburger {
@@ -216,7 +220,7 @@
 		nav {
 			flex-direction: row;
 			align-items: center;
-			padding: 1.95rem 2rem;
+			padding: 2rem 2rem;
 			/* margin-left: 1rem; */
 		}
 
@@ -244,7 +248,7 @@
 	}
 	@media (min-width: 768px) {
 		nav {
-			padding: 1.95rem 4rem;
+			padding: 2rem 4rem;
 		}
 		.small-logo :global(svg) {
 			width: auto;
@@ -253,7 +257,7 @@
 
 	@media (min-width: 1024px) {
 		nav {
-			padding: 1.95rem 6rem;
+			padding: 2rem 6rem;
 		}
 
 		.big-logo {

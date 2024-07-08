@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores'
 	import { fade } from 'svelte/transition'
 	import { Toaster } from 'svelte-french-toast'
 	import { ProgressBar } from '@prgm/sveltekit-progress-bar'
@@ -16,13 +17,15 @@
 	import '../app.css'
 
 	export let data
+
+	$: bgWhite = $page.url.pathname == '/'
 </script>
 
 <h2 style="width: 0; height: 0; margin: 0; padding: 0; visibility: hidden;" data-pagefind-ignore>
 	(Top)
 </h2>
 
-<div class="layout">
+<div class="layout" class:bgWhite>
 	<Header />
 
 	{#key data.url}
@@ -43,10 +46,10 @@
 		}
 	}}
 />
-
+<!-- 
 {#if !['/', '/outcomes', '/pdoom', '/quotes'].includes(data.url)}
 	<Toc />
-{/if}
+{/if} -->
 
 <ProgressBar color="var(--brand)" />
 
@@ -66,7 +69,11 @@
 		grid-auto-columns: 100%;
 		/* margin-inline: auto; */
 		/* padding: 1rem; */
-		overflow: hidden;
+		background-color: var(--bg-subtle);
+	}
+
+	.layout.bgWhite {
+		background-color: var(--bg);
 	}
 
 	main {
@@ -79,18 +86,18 @@
 
 	@media (min-width: 640px) {
 		main {
-			padding: 6rem 2rem 7.5rem 2rem;
+			padding: 0rem 2rem 7.5rem 2rem;
 		}
 	}
 
 	@media (min-width: 768px) {
 		main {
-			padding: 6rem 4rem 7.5rem 4rem;
+			padding: 0rem 4rem 7.5rem 4rem;
 		}
 	}
 	@media (min-width: 1024px) {
 		main {
-			padding: 6rem 6rem 7.5rem 6rem;
+			padding: 0rem 6rem 7.5rem 6rem;
 		}
 	}
 

@@ -36,7 +36,7 @@
 			<a href="/join">Rejoindre PauseIA</a>
 			<a href="/action">Comment pouvez-vous aider</a>
 			<a href="/communities">Communautés locales</a>
-			<a href="donate">Faire un don</a>
+			<a href="/donate">Faire un don</a>
 			<ExternalLink href="https://pauseai-shop.fourthwall.com" target="_blank"
 				>Marchandises</ExternalLink
 			>
@@ -68,6 +68,7 @@
 		display: flex;
 		padding: 6rem 6rem;
 		gap: 5rem;
+		overflow: hidden;
 	}
 
 	.footer-links {
