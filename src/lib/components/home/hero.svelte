@@ -28,8 +28,12 @@
 		</p>
 		<p>Nous faisons face à la menace la plus urgente de notre histoire. Chaque jour compte.</p>
 		<div class="buttons">
-			<Button href="/agir">Agir</Button>
-			<Button href="/nous-rejoindre" alt>Rejoindre</Button>
+			<div class="firstbutton">
+				<Button href="/agir">Agir</Button>
+			</div>
+			<div class="secondbutton">
+				<Button href="/nous-rejoindre" alt>Rejoindre</Button>
+			</div>
 		</div>
 	</section>
 	<div class="corners">
@@ -64,7 +68,34 @@
 		color: #fff;
 		text-align: left;
 		width: 100%;
-	}
+		opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.buttons {
+	opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+    transform: translateY(20px);
+	animation-delay: 0.7s;
+}
+
+
+  @keyframes fadeInsecondbutton {
+  	from {
+  		opacity: 0;
+  	}
+    to {
+      opacity: 1;
+    }
+}
 	.hero-content h1 {
 		font-size: 1.7rem;
 	}
@@ -75,7 +106,15 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-	}
+    filter: blur(10px);
+    animation: blurIn 2s ease-in-out forwards;
+  }
+
+  @keyframes blurIn {
+    to {
+      filter: blur(0);
+    }
+  }
 	.corners {
 		width: 100vw;
 		bottom: -1px;
