@@ -3,40 +3,55 @@
 	import Mark from '$components/Mark.svelte'
 	import LeftCorner from '$components/hero/LeftCorner.svelte'
 	import RightCorner from '$components/hero/RightCorner.svelte'
+	import { onMount } from 'svelte'
+	import { fade, fly, blur } from 'svelte/transition'
 	const label_id = 'hero-title'
+
+	// Workaround to trigger transitions on render
+	let mounted = false
+	onMount(() => {
+		mounted = true
+	})
 </script>
 
-<section class="hero" aria-labelledby={label_id}>
-	<div class="hero-overlay">
-		<enhanced:img
-			src="$assets/hero_bg.jpg"
-			alt="PauseAI protesters"
-			class="hero-bg"
-			sizes="min(1920px, 100vw)"
-			fetchpriority="high"
-			loading="eager"
-		/>
-	</div>
-	<section class="hero-content">
-		<h1 id={label_id}>
-			Ne laissons pas l'IA nous{'\u00A0'}détruire, <br /><Mark>agissons maintenant</Mark>
-		</h1>
-		<p>
-			Selon la majorité des experts, le développement rapide de l'intelligence artificielle présente
-			un danger catastrophique pour l'humanité à très court terme, au potentiel plus dévastateur que
-			la bombe atomique.
-		</p>
-		<p>Nous faisons face à la menace la plus urgente de notre histoire. Chaque jour compte.</p>
-		<div class="buttons">
-			<Button href="/agir">Agir</Button>
-			<Button href="/nous-rejoindre" alt>Rejoindre</Button>
+{#if mounted}
+	<section class="hero" aria-labelledby={label_id}>
+		<div class="hero-overlay">
+			<enhanced:img
+				src="$assets/hero_bg.jpg"
+				in:blur={{ amount: 10, duration: 2000, opacity: 1 }}
+				alt="PauseAI protesters"
+				class="hero-bg"
+				sizes="min(1920px, 100vw)"
+				fetchpriority="high"
+				loading="eager"
+			/>
+		</div>
+		<section class="hero-content" in:fade={{ duration: 500, delay: 200 }}>
+			<h1 id={label_id}>
+				Ne laissons pas l'IA nous{'\u00A0'}détruire, <br /><Mark>agissons maintenant</Mark>
+			</h1>
+			<p>
+				Selon la majorité des experts, le développement rapide de l'intelligence artificielle
+				présente un danger catastrophique pour l'humanité à très court terme, au potentiel plus
+				dévastateur que la bombe atomique.
+			</p>
+			<p>Nous faisons face à la menace la plus urgente de notre histoire. Chaque jour compte.</p>
+			<div class="buttons">
+				<div in:fly={{ y: 20, duration: 300, delay: 700 }}>
+					<Button href="/agir">Agir</Button>
+				</div>
+				<div in:fly={{ y: 20, duration: 300, delay: 700 }}>
+					<Button href="/nous-rejoindre" alt>Rejoindre</Button>
+				</div>
+			</div>
+		</section>
+		<div class="corners">
+			<LeftCorner />
+			<RightCorner />
 		</div>
 	</section>
-	<div class="corners">
-		<LeftCorner />
-		<RightCorner />
-	</div>
-</section>
+{/if}
 
 <style>
 	.hero {

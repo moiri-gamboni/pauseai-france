@@ -23,6 +23,7 @@
 		color: var(--text);
 		text-decoration: none;
 		font-size: 1rem;
+		transition-delay: 100ms;
 	}
 
 	a.c2a {
@@ -37,7 +38,7 @@
 	}
 	a:hover {
 		color: var(--brand);
-		text-decoration: underline;
+		/*text-decoration: underline;*/
 	}
 	@media (min-width: 1024px) {
 		a {
