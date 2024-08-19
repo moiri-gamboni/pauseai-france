@@ -5,6 +5,7 @@
 	import Risks from '$components/home/risks.svelte'
 	import Articles from '$components/home/articles.svelte'
 	import Faq from '$components/home/faq.svelte'
+	import Quotes from '$components/home/quotes.svelte'
 	import Supporters from '$components/home/supporters.svelte'
 
 	const title = 'Exigeons une Pause IA'
@@ -24,3 +25,5 @@
 <!-- <Articles /> -->
 
 <Faq />
+
+<Quotes />
