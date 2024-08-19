@@ -4,8 +4,8 @@
 	export let quote
 	export let author
 	export let description
-	export let firstChild
-	export let image
+	export let firstChild: any = null
+	export let image: any = null
 </script>
 
 <article class={firstChild ? 'firstChild' : ''}>
