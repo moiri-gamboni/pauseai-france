@@ -24,6 +24,6 @@
 
 <!-- <Articles /> -->
 
-<Quotes />
-
 <Faq />
+
+<Quotes />
