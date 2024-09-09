@@ -20,8 +20,7 @@
 </script>
 
 <Banner>
-	Conférence à Paris{'\u00A0'}: «{'\u00A0'}Dangers de l'IA - La France dans le déni {'\u202F'}?{'\u00A0'}»
-	| <a href="https://lu.ma/t648gs2x" target="_blank">Réservez votre place ici</a>
+	Découvrez notre contre-expertise au rapport de la Commission de l'IA {'\u00A0'}: «{'\u00A0'}<a href="https://contre-rapport-ia.fr/" target="_blank">IA : Nos craintes pour la France</a>{'\u00A0'}»
 </Banner>
 
 <!-- probably have to change nav colors and classes to respond to banner presence instead of route -->
