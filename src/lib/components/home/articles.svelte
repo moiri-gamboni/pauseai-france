@@ -60,4 +60,10 @@
 			grid-template-columns: 1fr 1fr;
 		}
 	}
+
+	@media (min-width: 1024px) {
+		.articles-grid {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
 </style>
