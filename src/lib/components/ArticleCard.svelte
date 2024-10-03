@@ -3,7 +3,7 @@
 
 	export let title
 	export let blurb
-	export let category
+	export let category = ''
 	export let url
 </script>
 
@@ -21,6 +21,9 @@
 </a>
 
 <style>
+	h3 {
+		margin: 0;
+	}
 	.footer {
 		display: flex;
 		justify-content: space-between;
@@ -30,7 +33,7 @@
 		font-size: 0.875rem;
 	}
 	article {
-		padding: 1.25rem 2rem;
+		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
