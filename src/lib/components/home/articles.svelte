@@ -9,43 +9,37 @@
 	<UnderlinedTitle id={label_id}>Nos articles mis en avant</UnderlinedTitle>
 	<div class="articles-grid">
 		<ArticleCard
-			title="The difficult psychology of existential risk"
-			blurb="A framework for thinking about how to mitigate the risks from powerful AI systems"
-			category="Gouvernance"
-			url="/dangers"
+			title="L’IA et la Cybersécurité"
+			blurb="Les systèmes d'IA peuvent déjà analyser et écrire du code, identifier des vulnérabilités et les exploiter."
+			url="https://pauseia.substack.com/p/lia-et-la-cybersecurite"
 		/>
 		<ArticleCard
-			title="The difficult psychology of existential risk"
-			blurb="A framework for thinking about how to mitigate the risks from powerful AI systems. And this card description takes up two lines."
-			category="Gouvernance"
-			url="/dangers"
+			title="Quatre niveaux de réglementation de l’IA"
+			blurb="Clarifier et mesurer l'efficacité des réglementations aux différentes étapes du processus de création d'un modèle."
+			url="https://pauseia.substack.com/p/quatre-niveaux-de-reglementation"
 		/>
 		<ArticleCard
-			title="The difficult psychology of existential risk"
-			blurb="A framework for thinking about how to mitigate the risks from powerful AI systems"
-			category="Gouvernance"
-			url="/dangers"
+			title="Classement p(doom) des scientifiques"
+			blurb="L'estimation du potentiel de destruction de l'IA par les scientifiques du secteur de l'IA"
+			url="https://pauseia.substack.com/p/classement-pdoom-des-scientifiques"
 		/>
 		<ArticleCard
-			title="The difficult psychology of existential risk"
-			blurb="A framework for thinking about how to mitigate the risks from powerful AI systems"
-			category="Gouvernance"
-			url="/dangers"
+			title="Les risques existentiels liés à une superintelligence artificielle"
+			blurb="Monteriez-vous dans un prototype d’avion dont les ingénieurs aéronautiques estiment qu’il a 14{'\u202F'}% de chances de s’écraser{'\u202F'}?"
+			url="https://pauseia.substack.com/p/les-risques-existentiels-lies-a-une"
 		/>
 		<ArticleCard
-			title="The difficult psychology of existential risk"
-			blurb="A framework for thinking about how to mitigate the risks from powerful AI systems"
-			category="Gouvernance"
-			url="/dangers"
+			title="Les modèles d’IA face aux humains"
+			blurb="Où en sont les modèles les plus récents par rapport à l'intelligence humaine{'\u202F'}?"
+			url="https://pauseia.substack.com/p/les-modeles-dia-face-aux-humains"
 		/>
 		<ArticleCard
-			title="The difficult psychology of existential risk"
-			blurb="A framework for thinking about how to mitigate the risks from powerful AI systems"
-			category="Gouvernance"
-			url="/dangers"
+			title="Pourquoi une superintelligence pourrait apparaître plus tôt que prévu"
+			blurb="L'accélération exponentielle des progrès en IA et ses implications alarmantes"
+			url="https://pauseia.substack.com/p/pourquoi-une-superintelligence-pourrait"
 		/>
 	</div>
-	<Button href="/posts">Voir tous les articles</Button>
+	<Button href="https://pauseia.substack.com/">Voir tous les articles</Button>
 </section>
 
 <style>
