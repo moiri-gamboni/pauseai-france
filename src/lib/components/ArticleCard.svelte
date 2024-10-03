@@ -3,7 +3,7 @@
 
 	export let title
 	export let blurb
-	export let category
+	export let category = ''
 	export let url
 </script>
 
