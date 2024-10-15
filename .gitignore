@@ -13,3 +13,4 @@ vite.config.ts.timestamp-*
 .env
 /TODO*
 .typographyChanges.json
+all_posts.md
