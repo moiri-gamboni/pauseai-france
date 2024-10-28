@@ -31,12 +31,6 @@
 			job: 'Archéologue et forgeron'
 		},
 		{
-			name: 'Antonin',
-			blurb: 'Volontaire',
-			image: 'membres/antonin.jpg',
-			job: 'Ingénieur à Télécom Paris'
-		},
-		{
 			name: 'Aurélia',
 			blurb: 'Volontaire',
 			image: 'membres/aurelia.jpg',
