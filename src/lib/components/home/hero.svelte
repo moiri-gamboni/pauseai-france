@@ -13,7 +13,7 @@
 	let elementId = 'banner'
 	let heightBanner = 0
 
-	let element
+	let element: any
 
 	const updateSize = () => {
 		if (element) {
