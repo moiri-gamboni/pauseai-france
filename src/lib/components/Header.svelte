@@ -20,8 +20,14 @@
 </script>
 
 <Banner>
+<<<<<<< HEAD
 	Forum des solutions pour une IA compatible avec l'humanité |
 	<a href="https://controleia.org/" target="_blank">Conférences et échanges le 8 février 2025</a>
+=======
+	«{'\u00A0'} Rejoignez la manifestation internationale de Pause AI à Paris le 22 novembre !{'\u00A0'}»
+	|
+	<a href="https://lu.ma/0tjhnnf9?tk=MlIZ1d" target="_blank"> En savoir plus et participer </a>
+>>>>>>> a18cdba (Modification de la bannière et ajout de la page md charte des valeurs)
 </Banner>
 
 <!-- probably have to change nav colors and classes to respond to banner presence instead of route -->
