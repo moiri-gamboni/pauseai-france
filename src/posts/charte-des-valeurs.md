@@ -24,3 +24,6 @@ Nous avons établi une hiérarchie de nos valeurs afin de prévenir tout conflit
 6. Nous prônons la **transparence** et la **liberté de penser**, en encourageant des discussions ouvertes et honnêtes. Nous favorisons la **convivialité** et une **ouverture d’esprit** qui permettent à tous de s’exprimer, dans un climat d’**écoute** et de respect mutuel.
 7. Les membres de Pause IA valorisent les interactions d’**entraide** et de **collaboration**. **Aucune politique partisane** n’influence nos actions ; chacun est libre de ses opinions.
 8. Pause IA est une association inclusive : chacun, quel que soit son parcours, a sa place dans nos activités.
+
+
+_Version du 10/10/2024_
