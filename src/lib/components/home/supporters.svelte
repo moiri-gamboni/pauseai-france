@@ -46,9 +46,11 @@
 		const observer = new ResizeObserver(() => {
 			const container = containerRef
 			const singleSet = container.firstElementChild as HTMLElement
+			// ignore margins
+			const containerWidth = containerRef.parentElement?.clientWidth ?? 0
 
 			// Compare the width of a single set of items against the container width
-			needsAnimation = singleSet.scrollWidth > container.clientWidth
+			needsAnimation = singleSet.scrollWidth > containerWidth
 		})
 
 		observer.observe(containerRef)
