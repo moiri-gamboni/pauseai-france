@@ -77,7 +77,6 @@
 
 	.logos {
 		overflow: hidden;
-		white-space: nowrap;
 		position: relative;
 		display: flex;
 		gap: 1rem;
