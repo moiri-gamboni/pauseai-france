@@ -1,46 +1,40 @@
 <script lang="ts">
 	import SupporterCard from '$components/SupporterCard.svelte'
 	import UnderlinedTitle from '$components/UnderlinedTitle.svelte'
+	/* eslint-disable @typescript-eslint/ban-ts-comment */
+	//@ts-expect-error some issue with the language server is preventing @sveltejs/enhanced-img ambient types from working
+	import ImageJPerret from '$assets/supporters/J_Perret.jpg?enhanced'
+	//@ts-expect-error
+	import ImageSAmarsy from '$assets/supporters/S_Amarsy.jpg?enhanced'
+	//@ts-expect-error
+	import ImageCdeLaHiguera from '$assets/supporters/C_de_la_Higuera.jpg?enhanced'
+	/* eslint-enable @typescript-eslint/ban-ts-comment */
 
 	const label_id = 'articles-title'
 
+	/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 	const supporters = [
 		{
-			name: 'Yann LeCan1',
-			blurb: 'Chercheur @ Meta',
-			image:
-				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/dangers'
+			name: 'Jérémy Perret',
+			blurb: 'Suboptimal IA Docteur et ingénieur en intelligence artificielle',
+			image: ImageJPerret,
+			url: 'https://www.linkedin.com/in/j%C3%A9r%C3%A9my-perret-b22a72b9/'
 		},
 		{
-			name: 'Yann LeCan2',
-			blurb: 'Chercheur @ Meta',
-			image:
-				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/dangers'
+			name: 'Stéphane Amarsy',
+			blurb: 'PDG The Next Mind Intelligence artificielle',
+			image: ImageSAmarsy,
+			url: 'https://www.linkedin.com/in/stephane-amarsy/'
 		},
 		{
-			name: 'Yann LeCan3',
-			blurb: 'Chercheur @ Meta',
-			image:
-				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/dangers'
-		},
-		{
-			name: 'Yann LeCan4',
-			blurb: 'Chercheur @ Meta',
-			image:
-				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/dangers'
-		},
-		{
-			name: 'Yann LeCan5',
-			blurb: 'Chercheur @ Meta',
-			image:
-				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/dangers'
+			name: 'Colin de la Higuera',
+			blurb:
+				'Chaire Unesco en Ressources Educatives Libres et Intelligence Artificielle à Nantes Université',
+			image: ImageCdeLaHiguera,
+			url: 'https://www.linkedin.com/in/colin-de-la-higuera-3b30aa62/'
 		}
 	]
+	/* eslint-enable @typescript-eslint/no-unsafe-assignment */
 
 	const secondsPerLogo = 5
 	$: animationDuration = secondsPerLogo * supporters.length

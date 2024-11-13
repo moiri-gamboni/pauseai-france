@@ -7,8 +7,8 @@
 
 <a class="article-link" href={url}>
 	<article>
-		<div class="supporter-image">
-			<img src={image} alt={name} />
+		<div class="img-container">
+			<enhanced:img class="supporter-img" src={image} alt={name} />
 		</div>
 		<div>
 			<h3>{name}</h3>
@@ -24,14 +24,20 @@
 		flex-direction: column;
 		gap: 1.25rem;
 	}
-	.supporter-image {
+	.img-container {
 		width: 17.5rem;
 		height: 17.5rem;
 	}
-	.supporter-image img {
+
+	.img-container :global(picture) {
+		height: 100%;
+	}
+
+	.supporter-img {
 		width: 100%;
 		height: 100%;
 		border-radius: 0.3125rem;
+		object-fit: cover;
 	}
 	p {
 		margin: 0;
@@ -48,13 +54,13 @@
 		color: inherit;
 	}
 	@media (min-width: 768px) {
-		.supporter-image {
+		.img-container {
 			width: 19.5rem;
 			height: 19.5rem;
 		}
 	}
 	@media (min-width: 1024px) {
-		.supporter-image {
+		.img-container {
 			width: 25.5rem;
 			height: 25.5rem;
 		}
