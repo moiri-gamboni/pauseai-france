@@ -10,35 +10,35 @@
 			blurb: 'Chercheur @ Meta',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/risks'
+			url: '/dangers'
 		},
 		{
 			name: 'Yann LeCan2',
 			blurb: 'Chercheur @ Meta',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/risks'
+			url: '/dangers'
 		},
 		{
 			name: 'Yann LeCan3',
 			blurb: 'Chercheur @ Meta',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/risks'
+			url: '/dangers'
 		},
 		{
 			name: 'Yann LeCan4',
 			blurb: 'Chercheur @ Meta',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/risks'
+			url: '/dangers'
 		},
 		{
 			name: 'Yann LeCan5',
 			blurb: 'Chercheur @ Meta',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/AI_%28Artificial_Intelligence%29_Dog.jpg/640px-AI_%28Artificial_Intelligence%29_Dog.jpg',
-			url: '/risks'
+			url: '/dangers'
 		}
 	]
 
