@@ -23,6 +23,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1.25rem;
+		width: 17.5rem;
 	}
 	.img-container {
 		width: 17.5rem;
@@ -54,12 +55,18 @@
 		color: inherit;
 	}
 	@media (min-width: 768px) {
+		article {
+			width: 19.5rem;
+		}
 		.img-container {
 			width: 19.5rem;
 			height: 19.5rem;
 		}
 	}
 	@media (min-width: 1024px) {
+		article {
+			width: 25.5rem;
+		}
 		.img-container {
 			width: 25.5rem;
 			height: 25.5rem;

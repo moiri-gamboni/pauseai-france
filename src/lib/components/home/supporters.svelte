@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SupporterCard from '$components/SupporterCard.svelte'
 	import UnderlinedTitle from '$components/UnderlinedTitle.svelte'
+	import { onMount } from 'svelte'
 	/* eslint-disable @typescript-eslint/ban-ts-comment */
 	//@ts-expect-error some issue with the language server is preventing @sveltejs/enhanced-img ambient types from working
 	import ImageJPerret from '$assets/supporters/J_Perret.jpg?enhanced'
@@ -38,13 +39,46 @@
 
 	const secondsPerLogo = 5
 	$: animationDuration = secondsPerLogo * supporters.length
+	let containerRef: HTMLDivElement
+	let needsAnimation = false
+
+	onMount(() => {
+		const observer = new ResizeObserver(() => {
+			const container = containerRef
+			const singleSet = container.firstElementChild as HTMLElement
+
+			// Compare the width of a single set of items against the container width
+			needsAnimation = singleSet.scrollWidth > container.clientWidth
+		})
+
+		observer.observe(containerRef)
+
+		return () => {
+			observer.disconnect()
+		}
+	})
 </script>
 
 <section aria-labelledby={label_id}>
 	<UnderlinedTitle id={label_id}>Nos soutiens</UnderlinedTitle>
-	<div class="logos" style="--animation-duration: {animationDuration}s;">
-		<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
-		{#each Array(2) as _}
+	<div
+		bind:this={containerRef}
+		class="logos"
+		class:animate={needsAnimation}
+		style="--animation-duration: {animationDuration}s;"
+	>
+		<div class="logo_items">
+			{#each supporters as supporter}
+				<SupporterCard
+					name={supporter.name}
+					blurb={supporter.blurb}
+					image={supporter.image}
+					url={supporter.url}
+				/>
+			{/each}
+		</div>
+
+		{#if needsAnimation}
 			<div class="logo_items">
 				{#each supporters as supporter}
 					<SupporterCard
@@ -55,7 +89,7 @@
 					/>
 				{/each}
 			</div>
-		{/each}
+		{/if}
 	</div>
 </section>
 
@@ -74,24 +108,28 @@
 		position: relative;
 		display: flex;
 		gap: 1rem;
+	}
+
+	.logos.animate {
 		margin-left: -1rem;
 		margin-right: -1rem;
 	}
+
 	@media (min-width: 640px) {
-		.logos {
+		.logos.animate {
 			margin-left: -2rem;
 			margin-right: -2rem;
 		}
 	}
 
 	@media (min-width: 768px) {
-		.logos {
+		.logos.animate {
 			margin-left: -4rem;
 			margin-right: -4rem;
 		}
 	}
 	@media (min-width: 1024px) {
-		.logos {
+		.logos.animate {
 			margin-left: -6rem;
 			margin-right: -6rem;
 		}
@@ -100,6 +138,9 @@
 	.logo_items {
 		display: flex;
 		gap: 1rem;
+	}
+
+	.logos.animate .logo_items {
 		animation: slides infinite linear;
 		animation-duration: var(--animation-duration, 25s); /* fallback duration */
 	}
