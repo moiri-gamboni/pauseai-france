@@ -20,9 +20,8 @@
 </script>
 
 <Banner>
-	«{'\u00A0'} Rejoignez la manifestation internationale de Pause AI à Paris le 22 novembre !{'\u00A0'}»
-	|
-	<a href="https://lu.ma/0tjhnnf9?tk=MlIZ1d" target="_blank"> En savoir plus et participer </a>
+	Rejoignez la manifestation internationale de PauseAI 
+	<a href="https://lu.ma/0tjhnnf9?tk=MlIZ1d" target="_blank">à Paris le 22 novembre !</a>
 </Banner>
 
 <!-- probably have to change nav colors and classes to respond to banner presence instead of route -->
