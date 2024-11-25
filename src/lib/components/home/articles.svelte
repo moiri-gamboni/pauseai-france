@@ -2,14 +2,13 @@
 	import ArticleCard from '$components/ArticleCard.svelte'
 	import Button from '$components/Button.svelte'
 	import UnderlinedTitle from '$components/UnderlinedTitle.svelte'
-	import { onMount, afterUpdate } from 'svelte'
+	import { onMount } from 'svelte'
 
-	const label_id = 'Titre_Articles'
+	const label_id = 'articles-title'
 
 	let articles: { title: string; blurb: string; url: string }[] = []
 	let title = ''
 	let maxArticles = Infinity
-	let titleElement: any
 
 	onMount(async () => {
 		const response = await fetch('/src/posts/articles.md')
@@ -27,12 +26,6 @@
 			url: string
 		}[]
 		document.documentElement.style.setProperty('--columns', Math.ceil(maxArticles / 2).toString())
-	})
-
-	afterUpdate(() => {
-		if (titleElement) {
-			titleElement.id = label_id
-		}
 	})
 
 	function parseMarkdown(text: string) {
@@ -71,14 +64,14 @@
 </script>
 
 <section aria-labelledby={label_id}>
-	<UnderlinedTitle bind:this={titleElement}>{title}</UnderlinedTitle>
+	<UnderlinedTitle id={label_id}>{title}</UnderlinedTitle>
 	<div class="articles-grid">
 		{#each articles as article}
 			<ArticleCard title={article.title} blurb={article.blurb} url={article.url} />
 		{/each}
 	</div>
 	<div style="margin-top: 2rem; text-align: left;">
-		<Button href="#Titre_Articles">Voir tous les articles</Button>
+		<Button href="https://pauseia.substack.com/#articles-title">Voir tous les articles</Button>
 	</div>
 </section>
 
