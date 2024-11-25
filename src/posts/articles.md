@@ -1,6 +1,8 @@
 <!-- On peut modifier la variable maxArticles pour afficher automatiquement un nombre précis d'articles sur le site web, par defaut 6 semble bien. On peut rajouter autant d'article que l'on veut dans ce fichier mais uniquement les X (maxArticles) premiers articles seront affichés sur le site-->
 
-## <!-- Pour rajouter un nouvel article il suffit de copier-coller un exemple d'article ci-dessous et de remplacer le titre (title), le sous titre (blurb) ainsi que l'url vers le post substack. Logiquement les nouveaux articles doivent être rajoutés en premier (sous ## Articles donc)-->
+<!-- Pour rajouter un nouvel article il suffit de copier-coller un exemple d'article ci-dessous et de remplacer le titre (title), le sous titre (blurb) ainsi que l'url vers le post substack. Logiquement les nouveaux articles doivent être rajoutés en premier (sous ## Articles donc)-->
+
+---
 
 title: Nos articles mis en avant
 maxArticles: 6
