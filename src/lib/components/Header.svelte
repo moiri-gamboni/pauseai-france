@@ -20,8 +20,10 @@
 </script>
 
 <Banner>
-	Rejoignez la manifestation internationale de PauseAI 
-	<a href="https://lu.ma/0tjhnnf9?tk=MlIZ1d" target="_blank">à Paris le 22 novembre !</a>
+	«{'\u00A0'}IA{'\u00A0'}: nos craintes pour la France{'\u00A0'}» |
+	<a href="https://contre-rapport-ia.fr/" target="_blank"
+		>Lisez notre contre-expertise du Rapport de la Commission de l’IA</a
+	>
 </Banner>
 
 <!-- probably have to change nav colors and classes to respond to banner presence instead of route -->
