@@ -22,7 +22,7 @@ Nous avons établi une hiérarchie de nos valeurs afin de prévenir tout conflit
 2. Pause IA est une association **pacifiste.** Nous n’utiliserons et n’encouragerons jamais d’actes de violence.
 3. Pause IA est **orientée vers l’action.** Nos échanges servent à **maximiser notre efficacité** en concrétisant rapidement les idées. Nous n’attendons pas la perfection avant d’agir.
 4. Nous croyons en une amélioration continue : **s’adapter et s’améliorer pour mieux agir.** Notre priorité est d’**optimiser nos efforts** pour que chaque action compte dans la poursuite de notre mission.
-5. Pause IA croit en la **rigueur scientifique.** Dans sa communication, Pause IA s'appuie sur des sources d’information fiables et s'efforce de refléter fidèlement les faits.
+5. Pause IA croit en la **rigueur scientifique.** Dans sa communication, Pause IA s'efforce de refléter fidèlement les faits et de s'appuyer sur des sources d'information fiables.
 6. Nous prônons la **transparence** et la **liberté de penser**, en encourageant des discussions ouvertes et honnêtes. Nous favorisons la **convivialité** et une **ouverture d’esprit** qui permettent à tous de s’exprimer, dans un climat d’**écoute** et de respect mutuel.
 7. Les membres de Pause IA valorisent les interactions d’**entraide** et de **collaboration**. **Aucune politique partisane** n’influence nos actions ; chacun est libre de ses opinions.
 8. Pause IA est une association inclusive : chacun, quel que soit son parcours, a sa place dans nos activités.
