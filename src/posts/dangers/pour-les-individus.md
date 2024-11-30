@@ -23,6 +23,14 @@ Pour ne pas être victime d’un deepfake, de façon directe ou pervasive, tenez
 
 Ce danger peut être mitigé par des régulations gouvernementales. Une réforme radicale de nos systèmes d’information sera nécessaire pour éviter complètement ce danger, mais le sujet est fortement débattu.
 
+## Algorithmes de recommandation et manipulation invisible
+
+Les algorithmes de recommandation, présents sur les réseaux sociaux, les moteurs de recherche et les plateformes de streaming, orientent discrètement nos choix, en proposant des contenus optimisés pour capter notre attention. Derrière cette apparente commodité se cachent des risques significatifs à l'échelle de l'individu mais également à l'échelle de la société : pour [nos démocraties](https://www.com.cuhk.edu.hk/publication/michael-journal-2024-social.pdf), [notre santé mentale](https://pmc.ncbi.nlm.nih.gov/articles/PMC10476631/) et notre capacité à distinguer le vrai du faux.
+
+En favorisant les contenus émotionnellement chargés et polarisants, ces systèmes exacerbent [les divisions politiques](https://www.polytechnique-insights.com/en/columns/digital/are-recommendation-algorithms-a-source-of-polarization/) et amplifient [les discours haineux](https://policyreview.info/articles/analysis/recommender-systems-and-amplification-extremist-content). Leur capacité à propager rapidement de la désinformation les rend particulièrement dangereux en période critique, comme lors [des élections](https://commons.clarku.edu/sps_masters_papers/91/). De plus, l’exposition prolongée à des contenus optimisés pour maintenir l’engagement peut nuire au bien-être psychologique, en particulier chez les jeunes.
+
+Ce danger peut être atténué par une transparence accrue dans le fonctionnement de ces systèmes et des régulations adaptées pour encadrer leur usage. Une prise de conscience collective est également essentielle pour apprendre à identifier et à limiter leur influence.
+
 ## Tromperie stratégique
 
 Un système d’IA pourrait recourir à la tromperie pour atteindre ses fins, qu’il ait appris ce comportement par imitation ou généralisation de mensonges humains, ou qu’il s’agisse d’une capacité développée par le système lui-même.
