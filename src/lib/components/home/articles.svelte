@@ -2,62 +2,108 @@
 	import ArticleCard from '$components/ArticleCard.svelte'
 	import Button from '$components/Button.svelte'
 	import UnderlinedTitle from '$components/UnderlinedTitle.svelte'
+	import { onMount } from 'svelte'
+
 	const label_id = 'articles-title'
+
+	let articles: { title: string; blurb: string; url: string }[] = []
+	let title = ''
+	let maxArticles = Infinity
+
+	onMount(async () => {
+		const response = await fetch('/src/posts/articles.md')
+		if (!response.ok) {
+			console.error('Failed to fetch articles.md:', response.statusText)
+			return
+		}
+		const text = await response.text()
+		const { content, metadata } = parseMarkdown(text)
+		title = metadata.title
+		maxArticles = metadata.maxArticles || Infinity
+		articles = parseArticles(content).slice(0, maxArticles) as {
+			title: string
+			blurb: string
+			url: string
+		}[]
+		document.documentElement.style.setProperty('--columns', Math.ceil(maxArticles / 2).toString())
+	})
+
+	function parseMarkdown(text: string) {
+		const [metadata, ...content] = text.split('---').slice(1)
+		const metadataObj = Object.fromEntries(
+			metadata
+				.trim()
+				.split('\n')
+				.map((line) => line.split(': ').map((str) => str.trim()))
+		)
+		return { metadata: metadataObj, content: content.join('---') }
+	}
+
+	function parseArticles(content: string) {
+		const articles = []
+		const lines = content.split('\n').filter((line) => line.trim() !== '')
+		let article: { title?: string; blurb?: string; url?: string } = {}
+		for (const line of lines) {
+			if (line.startsWith('- title:')) {
+				if (Object.keys(article).length > 0) {
+					articles.push(article)
+					article = {}
+				}
+				article.title = line.replace('- title:', '').trim()
+			} else if (line.startsWith('  blurb:')) {
+				article.blurb = line.replace('  blurb:', '').trim()
+			} else if (line.startsWith('  url:')) {
+				article.url = line.replace('  url:', '').trim()
+			}
+		}
+		if (Object.keys(article).length > 0) {
+			articles.push(article)
+		}
+		return articles
+	}
 </script>
 
 <section aria-labelledby={label_id}>
-	<UnderlinedTitle id={label_id}>Nos articles mis en avant</UnderlinedTitle>
+	<UnderlinedTitle id={label_id}>{title}</UnderlinedTitle>
 	<div class="articles-grid">
-		<ArticleCard
-			title="L’IA et la Cybersécurité"
-			blurb="Les systèmes d'IA peuvent déjà analyser et écrire du code, identifier des vulnérabilités et les exploiter."
-			url="https://pauseia.substack.com/p/lia-et-la-cybersecurite"
-		/>
-		<ArticleCard
-			title="Quatre niveaux de réglementation de l’IA"
-			blurb="Clarifier et mesurer l'efficacité des réglementations aux différentes étapes du processus de création d'un modèle."
-			url="https://pauseia.substack.com/p/quatre-niveaux-de-reglementation"
-		/>
-		<ArticleCard
-			title="Classement p(doom) des scientifiques"
-			blurb="L'estimation du potentiel de destruction de l'IA par les scientifiques du secteur de l'IA"
-			url="https://pauseia.substack.com/p/classement-pdoom-des-scientifiques"
-		/>
-		<ArticleCard
-			title="Les risques existentiels liés à une superintelligence artificielle"
-			blurb="Monteriez-vous dans un prototype d’avion dont les ingénieurs aéronautiques estiment qu’il a 14{'\u202F'}% de chances de s’écraser{'\u202F'}?"
-			url="https://pauseia.substack.com/p/les-risques-existentiels-lies-a-une"
-		/>
-		<ArticleCard
-			title="Les modèles d’IA face aux humains"
-			blurb="Où en sont les modèles les plus récents par rapport à l'intelligence humaine{'\u202F'}?"
-			url="https://pauseia.substack.com/p/les-modeles-dia-face-aux-humains"
-		/>
-		<ArticleCard
-			title="Pourquoi une superintelligence pourrait apparaître plus tôt que prévu"
-			blurb="L'accélération exponentielle des progrès en IA et ses implications alarmantes"
-			url="https://pauseia.substack.com/p/pourquoi-une-superintelligence-pourrait"
-		/>
+		{#each articles as article}
+			<ArticleCard title={article.title} blurb={article.blurb} url={article.url} />
+		{/each}
 	</div>
-	<Button href="https://pauseia.substack.com/">Voir tous les articles</Button>
+	<div style="margin-top: 2rem; text-align: left;">
+		<Button href="https://pauseia.substack.com/#articles-title">Voir tous les articles</Button>
+	</div>
 </section>
 
 <style>
 	.articles-grid {
 		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 1rem;
-		margin-bottom: 2rem;
+		margin-bottom: 2rem; /* Ajoute de l'espace en dessous des articles */
 	}
 
-	@media (min-width: 640px) {
+	@media (min-width: 1200px) {
 		.articles-grid {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: repeat(var(--columns), 1fr);
 		}
 	}
 
-	@media (min-width: 1024px) {
+	@media (min-width: 900px) and (max-width: 1199px) {
 		.articles-grid {
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 600px) and (max-width: 899px) {
+		.articles-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 599px) {
+		.articles-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
