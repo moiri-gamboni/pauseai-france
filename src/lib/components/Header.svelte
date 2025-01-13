@@ -20,9 +20,9 @@
 </script>
 
 <Banner>
-	«{'\u00A0'}IA{'\u00A0'}: nos craintes pour la France{'\u00A0'}» |
+	Forum des solutions pour une IA compatible avec l'humanité |
 	<a href="https://contre-rapport-ia.fr/" target="_blank"
-		>Lisez notre contre-expertise du Rapport de la Commission de l’IA</a
+		>Conférences et échanges le 8 février 2025</a
 	>
 </Banner>
 
