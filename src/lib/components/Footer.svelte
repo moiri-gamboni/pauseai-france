@@ -48,6 +48,7 @@
 		</div>
 		<div class="column">
 			<h2>Autres</h2>
+			<a href="/presse">Presse</a>
 			<a href="/mentions-legales">Mentions légales</a>
 			<a href="/politique-de-confidentialite">Politique de confidentialité</a>
 			<a href="/charte-des-valeurs">Charte des valeurs</a>

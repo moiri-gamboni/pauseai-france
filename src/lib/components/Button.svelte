@@ -1,10 +1,11 @@
 <script lang="ts">
 	export let alt = false
 	export let href = ''
+	export let target = ''
 </script>
 
 {#if href}
-	<a {href} class:alt>
+	<a {href} {target} class:alt>
 		<slot />
 	</a>
 {:else}
