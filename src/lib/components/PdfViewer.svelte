@@ -26,7 +26,7 @@
 			</div>
 		{:else}
 			<iframe
-				src="https://docs.google.com/viewer?url=https://pauseia.fr/{pdfPath}&embedded=true"
+				src="https://drive.google.com/viewerng/viewer?url=https://pauseia.fr/{pdfPath}&embedded=true"
 				width="100%"
 				height="800px"
 				frameborder="0"
