@@ -47,20 +47,24 @@
 	.consent-widget {
 		display: flex;
 		flex-direction: column;
-		text-align: center;
 		align-items: center;
-		padding: 2rem;
-		margin: 2rem;
 	}
 
 	.consent-text {
-		margin: 0 0 1.5rem;
-		max-width: 600px;
+		margin: 1.5rem 0;
 	}
 
 	.actions {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 		gap: 1rem;
+	}
+
+	@media (min-width: 768px) {
+		.actions {
+			flex-direction: row;
+		}
 	}
 
 	.consent-widget :global(.alt) {
