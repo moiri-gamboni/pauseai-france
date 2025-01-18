@@ -21,9 +21,7 @@
 
 <Banner>
 	Forum des solutions pour une IA compatible avec l'humanité |
-	<a href="https://contre-rapport-ia.fr/" target="_blank"
-		>Conférences et échanges le 8 février 2025</a
-	>
+	<a href="https://controleia.org/" target="_blank">Conférences et échanges le 8 février 2025</a>
 </Banner>
 
 <!-- probably have to change nav colors and classes to respond to banner presence instead of route -->
