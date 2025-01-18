@@ -9,7 +9,7 @@
 </script>
 
 <div class="pdf-viewer">
-	<object data={pdfPath} type="application/pdf" width="100%" height="800px" aria-label={title}>
+	<object data={pdfPath} type="application/pdf" width="100%" height="100%" aria-label={title}>
 		{#if !consent}
 			<div class="consent-widget">
 				<div class="consent-text">
@@ -26,9 +26,9 @@
 			</div>
 		{:else}
 			<iframe
-				src="https://docs.google.com/viewer?url=https://pauseia.fr/{pdfPath}&embedded=true"
+				src="https://drive.google.com/viewerng/viewer?url=https://pauseia.fr/{pdfPath}&embedded=true"
 				width="100%"
-				height="800px"
+				height="100%"
 				frameborder="0"
 				{title}
 			/>
@@ -39,9 +39,15 @@
 <style>
 	.pdf-viewer {
 		width: 100%;
-		height: 800px;
+		height: 500px;
 		border: 1px solid var(--color-border);
 		border-radius: 4px;
+	}
+
+	@media (min-width: 768px) {
+		.pdf-viewer {
+			height: 800px;
+		}
 	}
 
 	.consent-widget {
