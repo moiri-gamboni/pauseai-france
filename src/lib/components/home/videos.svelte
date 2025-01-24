@@ -23,6 +23,7 @@
 	.video-grid :global(iframe) {
 		aspect-ratio: 16 / 9;
 		width: 100%;
+		height: unset;
 	}
 
 	@media (min-width: 768px) {
