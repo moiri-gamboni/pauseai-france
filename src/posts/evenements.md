@@ -8,8 +8,13 @@
 ║ 1. Ne modifiez que le texte blanc entre > et <                   ║
 ║ 2. Le texte principal peut être librement modifié                ║
 ║ 3. Ne supprimez pas les balises <div> et leurs attributs         ║
+║ 4. Pour masquer la section, mettez "false" dans                  ║      ║    Afficher_Section_Evenement                                    ║
+║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 -->
+
+<!-- ↓↓↓ AFFICHER (true) OU MASQUER (false) LA SECTION ↓↓↓ -->
+<div id="Afficher_Section_Evenement" style="display:none;">true</div>
 
 <!-- ↓↓↓ MODIFIEZ LE TITRE DE LA SECTION ICI ↓↓↓ -->
 <div id="meta-title" style="display:none;">Nos évènements à venir</div>

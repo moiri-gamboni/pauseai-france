@@ -10,6 +10,7 @@
 	let title = 'Nos évènements à venir'
 	let buttonText = "S'inscrire aux événements"
 	let buttonUrl = 'https://info.helloasso.com/'
+	let displaySection = true // Par défaut, la section est visible
 
 	// On récupère le contenu directement
 	let EventComponent = eventData
@@ -36,28 +37,39 @@
 				console.log('Found button URL:', buttonUrl)
 			}
 
-			console.log('Final values:', { title, buttonText, buttonUrl })
+			// Récupérer la valeur de Afficher_Section_Evenement
+			const displayElem = document.querySelector('#Afficher_Section_Evenement')
+			if (displayElem) {
+				// Si displayElem.textContent est 'false', displaySection sera false
+				// Dans tous les autres cas (y compris 'true'), displaySection sera true
+				displaySection = displayElem.textContent?.trim().toLowerCase() !== 'false'
+				console.log('Section display status:', displaySection)
+			}
+
+			console.log('Final values:', { title, buttonText, buttonUrl, displaySection })
 		}, 100)
 	})
 </script>
 
-<section aria-labelledby={label_id}>
-	<UnderlinedTitle id={label_id}>Nos évènements</UnderlinedTitle>
+{#if displaySection}
+	<section aria-labelledby={label_id}>
+		<UnderlinedTitle id={label_id}>Nos évènements</UnderlinedTitle>
 
-	<div class="full-width-container">
-		<div class="content-wrapper">
-			<div class="content-container">
-				<h3>{title}</h3>
-				<div class="markdown-content">
-					<svelte:component this={EventComponent} />
+		<div class="full-width-container">
+			<div class="content-wrapper">
+				<div class="content-container">
+					<h3>{title}</h3>
+					<div class="markdown-content">
+						<svelte:component this={EventComponent} />
+					</div>
+				</div>
+				<div class="button-container">
+					<Button href={buttonUrl}>{buttonText}</Button>
 				</div>
 			</div>
-			<div class="button-container">
-				<Button href={buttonUrl}>{buttonText}</Button>
-			</div>
 		</div>
-	</div>
-</section>
+	</section>
+{/if}
 
 <style>
 	/* Fond orange pleine largeur */
