@@ -59,15 +59,13 @@ We’re now in a diversion in a diversion. This is very fun. ((8))
 
 Anyway, I brought you here because there’s this really unfunny part of nanotechnology lore I need to tell you about. In older versions of nanotech theory, a proposed method of nanoassembly involved the creation of trillions of tiny nanobots that would work in conjunction to build something.
 
-::bluebox-end::
+::colorbox-end::
 
 tesst
 
-::bluebox-end::
+::colorbox-end::
 
 END_DEBUG
-
-
 
 (7): test dans une blue box
 
