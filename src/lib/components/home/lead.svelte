@@ -61,11 +61,14 @@
 		flex-direction: column;
 		gap: 2rem;
 		margin-top: 2rem;
+		/* Centrer les boutons en affichage mobile */
+		align-items: center;
 	}
 
 	@media (min-width: 768px) {
 		.buttons {
 			flex-direction: row;
+			/* En desktop l'alignement est déjà bon grâce au align-items: center du parent */
 		}
 	}
 </style>
