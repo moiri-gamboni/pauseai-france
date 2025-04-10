@@ -3,11 +3,9 @@
 	import Logo from '$components/Logo.svelte'
 	import { page } from '$app/stores'
 	import Button from '$components/Button.svelte'
-	import Banner from '$components/Banner.svelte'
 
-	const enableBot = false
 	import { onMount } from 'svelte'
-	import { fade, fly, blur } from 'svelte/transition'
+	import { fade } from 'svelte/transition'
 
 	$: onHomepage = $page.url.pathname == '/'
 
@@ -18,11 +16,6 @@
 		mounted = true
 	})
 </script>
-
-<Banner>
-	Forum des solutions pour une IA compatible avec l'humanité |
-	<a href="https://controleia.org/" target="_blank">Conférences et échanges le 8 février 2025</a>
-</Banner>
 
 <!-- probably have to change nav colors and classes to respond to banner presence instead of route -->
 {#if mounted || !onHomepage}
