@@ -5,9 +5,8 @@
 	import Button from '$components/Button.svelte'
 	import Banner from '$components/Banner.svelte'
 
-	const enableBot = false
 	import { onMount } from 'svelte'
-	import { fade, fly, blur } from 'svelte/transition'
+	import { fade } from 'svelte/transition'
 
 	$: onHomepage = $page.url.pathname == '/'
 
@@ -19,7 +18,7 @@
 	})
 </script>
 
-<Banner>
+<Banner visible={false}>
 	Forum des solutions pour une IA compatible avec l'humanité |
 	<a href="https://controleia.org/" target="_blank">Conférences et échanges le 8 février 2025</a>
 </Banner>
