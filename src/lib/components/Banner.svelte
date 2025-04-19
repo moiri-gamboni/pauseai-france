@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { X } from 'lucide-svelte'
-	let visible = true // Initially, the banner is visible
+	export let visible = true // Initially, the banner is visible
 </script>
 
 {#if visible}
